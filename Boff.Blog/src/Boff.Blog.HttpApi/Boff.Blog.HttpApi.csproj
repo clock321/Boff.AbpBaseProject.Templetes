@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Boff.Blog</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Boff.Blog.Application.Contracts\Boff.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Boff.Blog.Application\Boff.Blog.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="4.4.0" />
+ 
+  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Boff.Blog.HttpApi.Hosting\Boff.Blog.HttpApi.xml</DocumentationFile>
+	</PropertyGroup>
+</Project>

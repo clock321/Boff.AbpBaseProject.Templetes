@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Boff.Blog</RootNamespace>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\Boff.Blog.HttpApi.Hosting\Boff.Blog.Application.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Boff.Blog.Application.Caching\Boff.Blog.Application.Caching.csproj" />
+    <ProjectReference Include="..\Boff.Blog.Application.Contracts\Boff.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Boff.Blog.Domain.Shared\Boff.Blog.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Boff.Blog.EntityFrameworkCore\Boff.Blog.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>
