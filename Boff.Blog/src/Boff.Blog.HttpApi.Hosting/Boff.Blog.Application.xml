@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Boff.Blog.Application</name>
+    </assembly>
+    <members>
+        <member name="M:Boff.Blog.Authorize.IAuthorizeService.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Boff.Blog.Authorize.IAuthorizeService.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Boff.Blog.Authorize.IAuthorizeService.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Boff.Blog.Authorize.AuthorizeService">
+            <summary>
+            JWT模式认证授权
+            </summary>
+        </member>
+        <member name="M:Boff.Blog.Authorize.AuthorizeService.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Boff.Blog.Authorize.AuthorizeService.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Boff.Blog.Authorize.AuthorizeService.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

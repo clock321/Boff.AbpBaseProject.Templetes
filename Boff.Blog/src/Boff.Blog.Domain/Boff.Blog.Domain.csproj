@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Boff.Blog</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\Boff.Blog.HttpApi.Hosting\Boff.Blog.Domain.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <!--<ItemGroup>
+    <ProjectReference Include="..\Boff.Blog.Domain.Shared\Boff.Blog.Domain.Shared.csproj" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Domain" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Boff.Blog.Domain.Shared\Boff.Blog.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
