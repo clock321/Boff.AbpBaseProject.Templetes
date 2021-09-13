@@ -1,6 +1,4 @@
-﻿
-using Boff.Blog.Domain.Configurations;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Caching;
 using Volo.Abp.Modularity;
 

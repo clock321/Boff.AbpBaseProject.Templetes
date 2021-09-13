@@ -1,7 +1,6 @@
 ﻿using Boff.Blog.Configurations;
-using Boff.Blog.Domain.Configurations;
-using Boff.Blog.ToolKits.Extensions;
-using Boff.Blog.ToolKits.GitHub;
+using Boff.Blog.Core.Extensions;
+using Boff.Blog.Core.GitHub;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;

@@ -1,11 +1,11 @@
-﻿using Meowv.Blog.ToolKits.Base;
+﻿using Meowv.Blog.Core.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 
-namespace Boff.Blog.ToolKits.Extensions
+namespace Boff.Blog.Core.Extensions
 {
     public static class ConvertExtensions
     {
@@ -221,7 +221,7 @@ namespace Boff.Blog.ToolKits.Extensions
     }
 }
 
-namespace Meowv.Blog.ToolKits.Base
+namespace Meowv.Blog.Core.Base
 {
     public class EnumResponse
     {

@@ -1,5 +1,4 @@
-﻿using Boff.Blog.Domain.Configurations;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,24 +32,26 @@ namespace Boff.Blog
 
             Configure<AbpDbContextOptions>(options =>
             {
-                switch (AppSettings.EnableDb)
-                {
-                    case "MySQL":
-                        options.UseMySQL();
-                        break;
-                    case "SqlServer":
-                        options.UseSqlServer();
-                        break;
-                    case "PostgreSql":
-                        options.UseNpgsql();
-                        break;
-                    case "Sqlite":
-                        options.UseSqlite();
-                        break;
-                    default:
-                        options.UseMySQL();
-                        break;
-                }
+                options.UseMySQL();
+
+                //switch (AppSettings.EnableDb)
+                //{
+                //    case "MySQL":
+                //        options.UseMySQL();
+                //        break;
+                //    case "SqlServer":
+                //        options.UseSqlServer();
+                //        break;
+                //    case "PostgreSql":
+                //        options.UseNpgsql();
+                //        break;
+                //    case "Sqlite":
+                //        options.UseSqlite();
+                //        break;
+                //    default:
+                //        options.UseMySQL();
+                //        break;
+                //}
             });
         }
     }

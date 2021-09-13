@@ -1,6 +1,5 @@
 ﻿using Boff.Blog.BackgroundJobs;
-using Boff.Blog.Domain.Configurations;
-using Boff.Blog.ToolKits.Extensions;
+using Boff.Blog.Core.Extensions;
 using Boff.Blog.Web.Filters;
 using Boff.Blog.Web.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

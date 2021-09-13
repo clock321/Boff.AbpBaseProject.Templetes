@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Boff.Blog.Application.Caching\Boff.Blog.Application.Caching.csproj" />
     <ProjectReference Include="..\Boff.Blog.Application.Contracts\Boff.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Boff.Blog.Core\Boff.Blog.Core.csproj" />
     <ProjectReference Include="..\Boff.Blog.Domain.Shared\Boff.Blog.Domain.Shared.csproj" />
     <ProjectReference Include="..\Boff.Blog.EntityFrameworkCore\Boff.Blog.EntityFrameworkCore.csproj" />
   </ItemGroup>

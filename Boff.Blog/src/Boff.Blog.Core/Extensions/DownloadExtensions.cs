@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace Boff.Blog.ToolKits.Extensions
+namespace Boff.Blog.Core.Extensions
 {
     public static class DownloadExtensions
     {

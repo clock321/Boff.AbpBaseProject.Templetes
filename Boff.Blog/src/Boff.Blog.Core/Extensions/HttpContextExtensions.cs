@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Linq;
 
-namespace Boff.Blog.ToolKits.Extensions
+namespace Boff.Blog.Core.Extensions
 {
     public static class HttpContextExtensions
     {

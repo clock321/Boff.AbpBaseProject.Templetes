@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using System.IO;
 using System.Reflection;
 
-namespace Boff.Blog.ToolKits.Extensions
+namespace Boff.Blog.Core.Extensions
 {
     public static class Log4NetExtensions
     {

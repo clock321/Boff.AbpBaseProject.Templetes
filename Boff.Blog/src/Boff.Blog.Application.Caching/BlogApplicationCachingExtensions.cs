@@ -1,5 +1,5 @@
 ﻿
-using Boff.Blog.ToolKits.Extensions;
+using Boff.Blog.Core.Extensions;
 using Microsoft.Extensions.Caching.Distributed;
 using System;
 using System.Threading.Tasks;

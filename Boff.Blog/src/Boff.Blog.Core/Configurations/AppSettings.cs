@@ -1,40 +1,78 @@
 ﻿//AppSettings.cs
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
 
-namespace Boff.Blog.Domain.Configurations
+namespace Boff.Blog
 {
-    /// <summary>
-    /// appsettings.json配置文件数据读取类
-    /// </summary>
+
     public class AppSettings
     {
-        /// <summary>
-        /// 配置文件的根节点
-        /// </summary>
-        private static readonly IConfigurationRoot _config;
+        private static IConfigurationRoot _config;
+
+        public static bool Initialized => _config != null;
+
+        public static IConfiguration Configuration
+        {
+            get
+            {
+                InitializeIfNot();
+
+                return _config;
+            }
+        }
+
+        private static void InitializeIfNot()
+        {
+            if (!Initialized)
+            {
+                var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+                Initialize(environment);
+            }
+        }
 
         /// <summary>
-        /// Constructor
+        /// Initialize configuration with appsettings.json & appsettings.{AppEnv.EnvironmentName}.json
         /// </summary>
-        static AppSettings()
+        public static void Initialize()
         {
-            // 加载appsettings.json，并构建IConfigurationRoot
+            //Initialize(string.Empty);
+            Initialize(AppEnv.EnvironmentName);
+        }
+
+        /// <summary>
+        /// Initialize configuration with appsettings.json & appsettings.{environmentName}.json
+        /// </summary>
+        /// <param name="environmentName"></param>
+        public static void Initialize(string environmentName)
+        {
+            if (Initialized)
+            {
+                return;
+            }
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
                                                     .AddJsonFile("appsettings.json", true, true);
+
+            if (!string.IsNullOrEmpty(environmentName))
+            {
+                builder = builder.AddJsonFile($"appsettings.{environmentName}.json", optional: true, reloadOnChange: false);
+            }
+            builder.AddEnvironmentVariables();
             _config = builder.Build();
         }
+
 
         /// <summary>
         /// EnableDb
         /// </summary>
-        public static string EnableDb => _config["ConnectionStrings:Enable"];
+        //public static string EnableDb => _config["ConnectionStrings:Enable"];
 
         /// <summary>
         /// ConnectionStrings
         /// </summary>
-        public static string ConnectionStrings => _config.GetConnectionString(EnableDb);
+        public static string ConnectionStrings => _config.GetConnectionString("BlogDb");
 
 
         /// <summary>
@@ -74,7 +112,6 @@ namespace Boff.Blog.Domain.Configurations
         }
 
 
-
         /// <summary>
         /// Hangfire
         /// </summary>
@@ -86,3 +123,7 @@ namespace Boff.Blog.Domain.Configurations
         }
     }
 }
+
+
+
+

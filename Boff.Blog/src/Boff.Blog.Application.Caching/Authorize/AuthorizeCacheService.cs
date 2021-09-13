@@ -1,5 +1,5 @@
 ﻿//AuthorizeCacheService.cs
-using Boff.Blog.ToolKits.Extensions;
+using Boff.Blog.Core.Extensions;
 using System;
 using System.Threading.Tasks;
 using static Boff.Blog.BlogConsts;

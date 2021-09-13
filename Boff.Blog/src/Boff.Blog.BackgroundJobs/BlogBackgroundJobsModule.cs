@@ -1,5 +1,4 @@
-﻿using Boff.Blog.Domain.Configurations;
-using Hangfire;
+﻿using Hangfire;
 using Hangfire.Dashboard.BasicAuthorization;
 using Hangfire.MySql;
 using System;

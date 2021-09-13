@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Boff.Blog.ToolKits.GitHub
+namespace Boff.Blog.Core.GitHub
 {
     public class AccessTokenRequest 
     {

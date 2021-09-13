@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Boff.Blog.ToolKits.Extensions;
+using Boff.Blog.Core.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;

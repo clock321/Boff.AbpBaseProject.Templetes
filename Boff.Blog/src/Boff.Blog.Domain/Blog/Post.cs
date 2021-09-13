@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,26 +14,34 @@ namespace Boff.Blog.Blog
         /// <summary>
         /// 标题
         /// </summary>
+        [MaxLength(200)]
         public string Title { get; set; }
 
         /// <summary>
         /// 作者
         /// </summary>
+        [MaxLength(10)]
         public string Author { get; set; }
 
         /// <summary>
         /// 链接
         /// </summary>
+        [MaxLength]
+        [Required]
         public string Url { get; set; }
 
         /// <summary>
         /// HTML
         /// </summary>
+        [MaxLength]
+        [Required]
         public string Html { get; set; }
 
         /// <summary>
         /// Markdown
         /// </summary>
+        [MaxLength]
+        [Required]
         public string Markdown { get; set; }
 
         /// <summary>

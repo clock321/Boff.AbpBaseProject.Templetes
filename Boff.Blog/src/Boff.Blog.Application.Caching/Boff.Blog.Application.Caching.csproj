@@ -13,7 +13,7 @@
     <ProjectReference Include="..\Boff.Blog.Application.Contracts\Boff.Blog.Application.Contracts.csproj" />
     <ProjectReference Include="..\Boff.Blog.Domain.Shared\Boff.Blog.Domain.Shared.csproj" />
     <ProjectReference Include="..\Boff.Blog.Domain\Boff.Blog.Domain.csproj" />
-    <ProjectReference Include="..\Boff.Blog.ToolKits\Boff.Blog.ToolKits.csproj" />
+    <ProjectReference Include="..\Boff.Blog.Core\Boff.Blog.Core.csproj" />
   </ItemGroup>
 
 </Project>
